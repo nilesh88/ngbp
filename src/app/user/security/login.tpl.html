@@ -1,0 +1,13 @@
+<div class="container">
+  <form class="form-signin">
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input ng-model="user.username"type="text" id="inputEmail" class="form-control" placeholder="Email address" required autofocus> <br>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input ng-model="user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="form-forgot-password">
+      <a href ui-sref="forgotPassword"> <font size="4"> forgot password? </a> <br> <br>
+    </div>
+    <button ng-click="login($event)" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+  </form>
+  <a class="btn btn-lg btn-primary btn-block" href ui-sref="register">Register</a>
+</div> <!-- /container -->

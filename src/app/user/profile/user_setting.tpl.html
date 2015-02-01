@@ -1,0 +1,22 @@
+<div ng-controller="PasswordChangeCtrl" class="container">
+    <form name="changePassword" class="form-signin">
+      <label for="currentPassword" class="sr-only">Password</label>
+      <input ng-model="user.currentPassword" type="password" name="password" id="currentPassword" ng-minlength=8 class="form-control" placeholder="Current Password" required>
+      <label for="newPassword" class="sr-only">Password</label>
+      <input ng-model="user.newPassword" type="password" name="password" id="newPassword" ng-minlength=8 class="form-control" placeholder="New Password" required>
+      <div class="input-help">
+      <h4>Password must meet the following requirements:</h4>
+      <ul>
+        <li ng-class="pwdHasLetter">At least <strong>one letter</strong></li>
+        <li ng-class="pwdHasNumber">At least <strong>one number</strong></li>
+        <li ng-class="pwdValidLength">At least <strong>8 characters long</strong></li>
+      </ul>
+      </div>
+      <label for="repeatNewPassword" class="sr-only">Confirm Password</label>
+      <input ng-model="user.repeatNewPassword" type="Password" name="repeatNewPassword" id="repeatNewPassword"  ng-minlength=8 class="form-control" placeholder="Confirm New Password" required data-password-verify="user.newPassword"> <br>
+      <div style="color:red" ng-show="resetPassword.repeatNewPassword.$error.passwordVerify">
+        Password is not equal! </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Change Password</button> <br>
+      </div>
+    </form>
+</div>

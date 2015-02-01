@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:200, 400, 300, 600);
+
+body {
+    background: url(http://tympanus.net/Freebies/HalcyonDaysTemplate/img/keyboard-bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+.opacity {
+    background-color: #000;
+}
+.logo{
+    font-family:'Raleway', sans-serif;
+    display: inline-block;
+    padding: 0.6em 1em;
+    border: 3px solid #ddd;
+    font-weight: 200;
+    font-size: 40px;
+    color: #ddd;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -165px;
+}
+span {
+    font-weight: 600;
+}

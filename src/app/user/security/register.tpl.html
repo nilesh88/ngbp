@@ -1,0 +1,24 @@
+<div class="container">
+  <form name="myForm" class="form-signin">
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input ng-model="user.username" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <div class="input-help">
+      <h4>Invalid Email</h4>
+    </div>
+    <label for="pw1" class="sr-only">Password</label>
+    <input ng-model="user.pw1" type="password" name="password" id="pw1" ng-minlength=8 class="form-control" placeholder="Password" required>
+    <div class="input-help">
+      <h4>Password must meet the following requirements:</h4>
+      <ul>
+        <li ng-class="pwdHasLetter">At least <strong>one letter</strong></li>
+        <li ng-class="pwdHasNumber">At least <strong>one number</strong></li>
+        <li ng-class="pwdValidLength">At least <strong>8 characters long</strong></li>
+      </ul>
+  </div>
+    <label for="pw2" class="sr-only">Password Repeat</label>
+    <input ng-model="user.pw2" type="password" name="pw2" id="pw2" ng-minlength=8 class="form-control" placeholder="Password Repeat" required data-password-verify="user.pw1">
+      <div style="color:red" ng-show="myForm.pw2.$error.passwordVerify">
+        Password is not equal! </div>
+    <button ng-click="register($event)" class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+  </form>
+</div> <!-- /container -->
